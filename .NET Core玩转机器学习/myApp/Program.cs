@@ -6,6 +6,7 @@ using Microsoft.ML.Transforms;
 
 namespace myApp
 {
+    
     class Program
     {
         // STEP 1: 定义数据结构。从文本数据块中的鸢尾花数据用来训练模型
@@ -106,10 +107,10 @@ namespace myApp
             //对自定义的数据进行识别
             var prediction = model.Predict(new IrisData()
             {
-                SepalLength = 3.3f,
-                SepalWidth = 1.6f,
-                PetalLength = 0.2f,
-                PetalWidth = 5.1f,
+                SepalLength = 5.3f,
+                SepalWidth = 3.6f,
+                PetalLength = 1.4f,
+                PetalWidth = 0.2f,
             });
 
             Console.WriteLine($"Predicted flower type is: {prediction.PredictedLabels}");
